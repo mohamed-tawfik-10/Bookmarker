@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Wancho&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome-free-6.7.2-web/css/all.min.css">
+  <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main container  py-5 text-center">
+    <h1 class="col-md-3 m-auto py-2  position-relative">Bookmarker</h1>
+    <div class=" inner  my-5 py-5">
+      <h2 class="text-center mx-auto px-3" style="max-width: 600px;">
+        <i class="fa-solid fa-bookmark me-2"></i>
+        Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark ms-2"></i>
+      </h2>
+      
+      <div id="alert" class="alert alert-danger d-none m-auto text-start my-5" role="alert">
+        <h3>Site Name or Url is not valid, Please follow the rules below :</h2>
+      
+          <div class="d-flex">
+            <i class="fa-solid fa-share"></i>
+            <p>Site name must contain at least 3 characters
+            </p>
+          </div>
+          <div class="d-flex">
+            <i class="fa-solid fa-share"></i>
+            <p>Site name must contain at least 3 characters
+            </p>
+          </div>
+      </div>
+      <div class="site-name w-100 text-start d-flex flex-column justify-content-center">
+        <label for="bookmarkName" class="pb-2 fw-semibold">
+          <i class="fa-solid fa-book-bookmark pe-2"></i>
+          Site Name</label>
+        <input oninput="validateProducts(this)" type="text" placeholder="Bookmark Name" class="form-control"
+          id="bookmarkName">
+      </div>
+      <div class="site-url text-start my-4 w-100 d-flex flex-column justify-content-center">
+        <label for="bookmarkURL" class="pb-2 fw-semibold">
+          <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+        <input oninput="validateProducts(this)" type="url" placeholder="Website URL" class="form-control"
+          id="bookmarkURL">
+      </div>
+      <button onclick="addProduct()" class=" btn text-white  px-5" id="submitBtn">Submit</button>
+    </div>
+    <table class="table mt-4 text-center bg-light">
+      <thead>
+        <tr>
+          <th class="text-capitalize">index</th>
+          <th class="text-capitalize">Website Name</th>
+          <th class="text-capitalize">Visit</th>
+          <th class="text-capitalize">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tableContent">
+        <tr>
+          <td>0</td>
+          <td>.....</td>
+          <td>
+            <button class="btn btn-visit" data-index="0">
+              <i class="fa-solid fa-eye pe-2"></i>Visit
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-delete pe-2" data-index="0">
+              <i class="fa-solid fa-trash-can"></i>
+              Delete
+            </button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+
+
+
+  </div>
+
+
+
+  <script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/index.js"></script>
+</body>
+
+</html>

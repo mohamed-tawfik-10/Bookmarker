@@ -1,0 +1,111 @@
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../image/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+}
+
+.main h1 {
+  font-family: Pacifico, cursive;
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.main h1::before {
+  content: "";
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  background-color: #fec260;
+  transition: height 350ms;
+  z-index: -1;
+}
+
+.main h1:hover::before {
+  height: 50%;
+}
+
+.inner {
+  border-top: dotted 3px #444;
+  border-bottom: dotted 3px #444;
+  background-color: #fffef5;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.container h2 {
+  font-family: Righteous, cursive;
+  font-size: 25px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.alert {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.alert h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.alert p {
+  margin-left: 10px;
+}
+
+input.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: #d1512d;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #a03315;
+}
+
+.btn-visit {
+  background-color: #9eb23b;
+  color: white;
+  border-radius: 8px;
+}
+
+.btn-visit:hover {
+  background-color: #6e8018;
+}
+
+.btn-delete {
+  background-color: #eb1d36;
+  color: white;
+  border-radius: 8px;
+}
+
+.btn-delete:hover {
+  background-color: #ba081d;
+}
+
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
